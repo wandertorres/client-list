@@ -1,12 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
+import { Client } from './client.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
 
-  constructor(private snackBar: MatSnackBar) { }
+  baseUrl = "​ https://private-92a969-processoseletivo1.apiary-mock.com/customers"
+
+  constructor(private snackBar: MatSnackBar,
+    private http: HttpClient) { }
 
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'x', {
@@ -14,5 +20,9 @@ export class ClientService {
       horizontalPosition: "right",
       verticalPosition: "top"
     })
+  }
+
+  create(client: Client): Observable<Client> {
+    return this.http.post<Client>(this.baseUrl, client);
   }
 }

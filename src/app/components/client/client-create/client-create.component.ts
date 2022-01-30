@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Client } from '../client.model';
 import { ClientService } from '../client.service';
 
 @Component({
@@ -9,13 +10,22 @@ import { ClientService } from '../client.service';
 })
 export class ClientCreateComponent implements OnInit {
 
+  client: Client = {
+    name: '',
+    age: 0,
+    city: ''
+  }
+
   constructor(private clientService: ClientService,
     private router: Router) { }
 
   ngOnInit(): void { }
 
   createClient(): void {
-    this.clientService.showMessage('Cliente cadastrado');
+    this.clientService.create(this.client).subscribe(() => {
+      this.clientService.showMessage('Cliente cadastrado!');
+      this.router.navigate(['/clients']);
+    });
   }
 
   cancel(): void {
