@@ -22,6 +22,10 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { ClientCrudComponent } from './views/client-crud/client-crud.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { ClientReadComponent } from './components/client/client-read/client-read.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { ClientCreateComponent } from './components/client/client-create/client-
     NavComponent,
     HomeComponent,
     ClientCrudComponent,
-    ClientCreateComponent
+    ClientCreateComponent,
+    ClientReadComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,10 @@ import { ClientCreateComponent } from './components/client/client-create/client-
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

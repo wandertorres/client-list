@@ -9,7 +9,7 @@ import { Client } from './client.model';
 })
 export class ClientService {
 
-  baseUrl = "​ https://private-92a969-processoseletivo1.apiary-mock.com/customers"
+  baseUrl = "http://private-92a969-processoseletivo1.apiary-mock.com/customers";
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
@@ -24,5 +24,9 @@ export class ClientService {
 
   create(client: Client): Observable<Client> {
     return this.http.post<Client>(this.baseUrl, client);
+  }
+
+  read(): Observable<Client[]> {
+    return this.http.get<Client[]>(this.baseUrl);
   }
 }

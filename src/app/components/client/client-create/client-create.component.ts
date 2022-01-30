@@ -11,6 +11,7 @@ import { ClientService } from '../client.service';
 export class ClientCreateComponent implements OnInit {
 
   client: Client = {
+    id: 1,
     name: '',
     age: 0,
     city: ''
