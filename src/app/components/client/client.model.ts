@@ -1,6 +1,6 @@
 export interface Client {
-    id: number//adicionar ?
+    id?: number
     name: string
-    age?: number
-    city?: string
+    age: number
+    city: string
 }
