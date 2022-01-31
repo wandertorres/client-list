@@ -1,15 +1,10 @@
-table {
-    width: 100%;
+.container {
+  position: relative;
+  min-height: 200px;
+  max-height: 450px;
+  overflow: auto;
 }
 
-.edit {
-    margin-right: 10px;
-}
-
-.edit > i {
-    color: #d9cd26;
-}
-
-.delete > i {
-    color: #e35e6b;
+.full-width-table {
+  width: 100%;
 }

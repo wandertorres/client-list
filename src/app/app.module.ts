@@ -26,7 +26,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ClientReadComponent } from './components/client/client-read/client-read.component';
-import { ClientListComponent } from './components/client/client-list/client-list.component';
+//import { ClientListComponent } from './components/client/client-list/client-list.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { ClientListComponent } from './components/client/client-list/client-list
     ClientCrudComponent,
     ClientCreateComponent,
     ClientReadComponent,
-    ClientListComponent,
+    //ClientListComponent,
   ],
   imports: [
     BrowserModule,
