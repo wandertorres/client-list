@@ -38,7 +38,7 @@ const EXAMPLE_DATA: Client[] = [
  * (including sorting, pagination, and filtering).
  */
 export class ClientReadDataSource extends DataSource<Client> {
-  data = DATA;
+  data = EXAMPLE_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 

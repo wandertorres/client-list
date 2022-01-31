@@ -19,15 +19,9 @@ export class ClientReadComponent implements AfterViewInit {
   clientService!: ClientService;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  //clients: Client[] = [];
   displayedColumns = ['id', 'name', 'age'];
-  data: Client[] = [];
-  //clientService: any;
 
   constructor() {
-    this.clientService.read().subscribe(clients => {
-      this.data = clients;
-    })
     this.dataSource = new ClientReadDataSource();
    }
 
