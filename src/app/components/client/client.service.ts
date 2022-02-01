@@ -30,10 +30,10 @@ export class ClientService {
     return this.http.get<Client[]>(this.baseUrl);
   }
 
-  readById(id: string): Observable<Client> {
+  /*readById(id: string | null): Observable<Client> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.get<Client>(url);
-  }
+  }*/
 
   update(client: Client): Observable<Client> {
     const url = `${this.baseUrl}/${client.id}`;

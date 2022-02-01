@@ -16,8 +16,7 @@ export class ClientReadComponent implements AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<Client>;
   dataSource: ClientReadDataSource;
-
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
+  
   displayedColumns = ['id', 'name', 'age', 'city', 'action'];
   clients: Client[] = [];
 
@@ -32,8 +31,6 @@ export class ClientReadComponent implements AfterViewInit {
       this.dataSource.paginator = this.paginator;
       
       this.table.dataSource = this.dataSource;
-
-      console.log(this.dataSource.data)
     });
   }
 }
