@@ -51,7 +51,7 @@ export class ClientReadDataSource extends DataSource<Client> {
         case 'name': return compare(a.name, b.name, isAsc);
         case 'city': return compare(a.city, b.city, isAsc);
         case 'age': return compare(a.age, b.age, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'id': return compare(+a.id!, +b.id!, isAsc);
         default: return 0;
       }
     });

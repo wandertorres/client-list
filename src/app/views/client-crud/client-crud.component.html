@@ -1,5 +1,12 @@
-<button mat-raised-button (click)="navigateToClientCreate()" color="primary">
-    Novo Cliente
-</button>
+<mat-card class="mat-elevation-z3">
+    <mat-card-title>Lista de Clientes</mat-card-title>
+        <app-client-read></app-client-read>
 
-<app-client-read></app-client-read>
+        <button mat-raised-button (click)="navigateToClientCreate()" class="btn-primary">
+            Novo Cliente
+        </button>
+    
+        <button mat-raised-button (click)="navigateToHome()">
+            Voltar
+        </button>
+</mat-card>

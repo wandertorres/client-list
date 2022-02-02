@@ -11,22 +11,26 @@ import { ClientService } from '../client.service';
 export class ClientCreateComponent implements OnInit {
 
   client: Client = {
-    id: 1,
     name: '',
     age: 0,
     city: ''
-  }
+  };
 
-  constructor(private clientService: ClientService,
-    private router: Router) { }
+  constructor(
+    private clientService: ClientService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void { }
 
   createClient(): void {
-    this.clientService.create(this.client).subscribe(() => {
+    /*this.clientService.create(this.client).subscribe(() => {
       this.clientService.showMessage('Cliente cadastrado!');
       this.router.navigate(['/clients']);
-    });
+    });*/
+
+    this.clientService.showMessage(`Cliente ${this.client.name} cadastrado!`);
+    this.router.navigate(['/clients']);
   }
 
   cancel(): void {

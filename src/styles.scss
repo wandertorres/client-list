@@ -2,3 +2,18 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: "Avenir Next LT Pro", sans-serif; }
+
+.msg-sucess {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.msg-error {
+    background-color: #e35e6b;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #008E98;
+    color: #fff;
+}

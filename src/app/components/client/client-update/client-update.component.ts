@@ -11,9 +11,9 @@ import { ClientService } from '../client.service';
 export class ClientUpdateComponent implements OnInit {
   client: Client = {
     id: 0,
-    name: 'Wander',
+    name: '',
     age: 0,
-    city: 'Sev'
+    city: ''
   };
 
   constructor(
@@ -25,7 +25,7 @@ export class ClientUpdateComponent implements OnInit {
   ngOnInit(): void {
     const id: number = parseInt(this.route.snapshot.paramMap.get('id')!);
     this.clientService.read().subscribe((client) => {
-      this.client = client[id];
+      this.client = client[id-1];
     })
     /*const id: string | null = this.route.snapshot.paramMap.get('id');
     this.clientService.readById(id).subscribe(client => {
@@ -34,7 +34,7 @@ export class ClientUpdateComponent implements OnInit {
   }
 
   updateClient(): void {
-    this.clientService.update(this.client).subscribe(() =>{
+    this.clientService.update(this.client).subscribe(() => {
       this.clientService.showMessage(`Cliente ${this.client.name} atualizado!`);
       this.router.navigate(['/clients']);
     })

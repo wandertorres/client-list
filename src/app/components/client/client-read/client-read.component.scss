@@ -1,10 +1,14 @@
 .container {
   position: relative;
   min-height: 200px;
-  max-height: 450px;
+  max-height: 380px;
   overflow: auto;
 }
 
 .full-width-table {
   width: 100%;
+}
+
+.edit {
+  color: #f2a000;
 }

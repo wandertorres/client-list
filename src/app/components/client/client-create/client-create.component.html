@@ -1,18 +1,18 @@
-<mat-card>
+<mat-card class="mat-elevation-z3">
     <mat-card-title>Novo Cliente</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="client.name" name="name" />
+            <input matInput placeholder="Nome" type="text" [(ngModel)]="client.name" name="name" />
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Idade" [(ngModel)]="client.age" name="age" />
+            <input matInput placeholder="Idade" type="number" [(ngModel)]="client.age" name="age" />
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Cidade" [(ngModel)]="client.city" name="city" />
+            <input matInput placeholder="Cidade" type="text" [(ngModel)]="client.city" name="city" />
         </mat-form-field>
     </form>
 
-    <button mat-raised-button (click)="createClient()" color="primary">
+    <button mat-raised-button (click)="createClient()" class="btn-primary">
         Salvar
     </button>
     <button mat-raised-button (click)="cancel()">

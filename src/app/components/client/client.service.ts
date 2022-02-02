@@ -15,10 +15,11 @@ export class ClientService {
     private http: HttpClient) { }
 
   showMessage(msg: string): void {
-    this.snackBar.open(msg, 'x', {
+    this.snackBar.open(msg, 'X', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: ["msg-sucess"]
     })
   }
 

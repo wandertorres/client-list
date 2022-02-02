@@ -17,4 +17,8 @@ export class ClientCrudComponent implements OnInit {
     this.router.navigate(['/clients/create']);
   }
 
+  navigateToHome(): void {
+    this.router.navigate(['']);
+  }
+
 }
