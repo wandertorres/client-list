@@ -1,7 +1,7 @@
 .container {
   position: relative;
-  min-height: 200px;
-  max-height: 380px;
+  min-height: 44vh;
+  max-height: 44vh;
   overflow: auto;
 }
 
@@ -11,4 +11,13 @@
 
 .edit {
   color: #f2a000;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
 }
