@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "ng build"
   },
   "engines": {
-    "node": "16.13.x",
+    "node": "16.13.1",
     "npm": "8.1.2"
   },
   "private": true,
